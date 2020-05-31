@@ -1,15 +1,15 @@
 body {
     margin: 0;
     background-image: url(Sakura.jpg);
+    background-size: cover;
     font-family: sans-serif;
 }
 
 .main_section {
-    min-height: 2000px;
     background-color: whitesmoke;
-    width: 65%;
-    padding: 20px 25px;
-    margin: auto ;
+    width: 100%;
+    padding: 25px;
+    margin: auto;
     border-style: solid;
     border-width: 0px 3px 0px 3px;
     border-color: gray;
@@ -18,14 +18,33 @@ body {
 .title {
     float: top;
     font-size: 32px;
+    margin: 10px;
 }
 
 .description {
-    font-size: 18px;
+    float: bottom;
+    font-size: 16px;
 }
 
 .img {
     float: left;
-    margin-right: 25px;
-    border-left: solid gray;
+    border-left: solid gray 5px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.rating {
+    font-weight: bold;
+    font-size: 32px;
+    border: solid gold;
+    border-radius: 8px 18px;
+    padding: 8px;
+    margin: 20px
+}
+
+@media only screen and (min-width: 650px) {
+    .main_section {
+        width: 75%
+    }
+
 }
