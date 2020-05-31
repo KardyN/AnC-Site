@@ -1,0 +1,8 @@
+body {
+    background: #e2e2e2;
+    color: rgb(224, 224, 224);
+    min-height: 100%;
+    position: relative;
+    overflow-y: scroll;
+}
+#main {margin: 10px 100px}
