@@ -1,14 +1,23 @@
-body {
+* {
     margin: 0;
+    padding: 0;
+
+}
+
+body {
     background-image: url(Sakura.jpg);
     background-size: cover;
     font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
 }
 
-.main_section {
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     background-color: whitesmoke;
-    width: 100%;
-    padding: 25px;
+    max-width: 100%;
+    padding: 10px;
     margin: auto;
     border-style: solid;
     border-width: 0px 3px 0px 3px;
@@ -16,35 +25,45 @@ body {
 }
 
 .title {
-    float: top;
     font-size: 32px;
-    margin: 10px;
-}
-
-.description {
-    float: bottom;
-    font-size: 16px;
 }
 
 .img {
-    float: left;
-    border-left: solid gray 5px;
-    margin-bottom: 20px;
-    margin-right: 20px;
+    border-left: 5px solid gray;
+    border-radius: 16px;
 }
 
 .rating {
+    text-align: center;
     font-weight: bold;
     font-size: 32px;
-    border: solid gold;
+    border: 3px solid gold;
     border-radius: 8px 18px;
-    padding: 8px;
-    margin: 20px
 }
 
-@media only screen and (min-width: 650px) {
-    .main_section {
-        width: 75%
-    }
+.friends-watched {
+    text-align: center;
+    border: 1px solid black;
+}
 
+.description {
+    font-size: 16px;
+    border: 1px solid black;
+}
+
+.franchise-list {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.links {
+    text-align: center;
+    border: 1px solid black;
+}
+
+@media only screen and (min-width: 850px) {
+    .container {
+        width: 75%;
+        margin: auto;
+    }
 }
