@@ -9,18 +9,29 @@ html {
     min-height: 100vh;
 }
 
-.page-container {
-    min-width: 100vw;
+body {
     min-height: 100vh;
-    position: relative;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.page-container {
+    min-height: 100%;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: max-content 1fr max-content max-content;
+    justify-items: stretch;
+    align-items: stretch;
+    height: 100%;
     background-image: url(Sakura.jpg);
     background-size: cover;
     font-family: sans-serif;
-    overflow-x: hidden;
-    overflow-y: scroll;
 }
 
 .page-header {
+    grid-column: 1 / -1;
+    grid-row: 1 / 2;
     height: fit-content;
     position: sticky;
     top: 0;
@@ -48,13 +59,14 @@ html {
 }
 
 .content-container {
-    max-width: 1000px;
+    grid-row: 2 / 3;
+    min-height: fit-content;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content max-content repeat(4, fit-content(100%));
     background-color: whitesmoke;
     padding: 10px;
-    margin: auto;
+    margin: 0px auto;
     border-style: solid;
     border-width: 0px 3px 0px 3px;
     border-color: gray;
@@ -81,7 +93,6 @@ html {
     grid-row: 2 / 3;
     width: fit-content;
     height: fit-content;
-    max-width: 100%;
     padding: 4px;
     margin: 4px;
     text-align: center;
@@ -120,26 +131,43 @@ html {
 .links {
     grid-column: 1 / -1;
     grid-row: 6 / 7;
-    min-height: 100px;
+    min-height: 50px;
     text-align: center;
     border: 1px solid black;
     margin: 4px;
 }
 
 .ads {
-    max-width: 1000px;
-    height: 100px;
-    margin: auto;
+    grid-row: 3 / 4;
+    height: 50px;
     background-color: white;
     border: 3px solid yellow;
 }
 
 .footer {
-    min-height: 40px;
+    grid-column: 1 / -1;
+    grid-row: 4 / 5;
+    height: 40px;
     background-color: whitesmoke;
     border-top: 3px solid gray;
 }
 
-@media only screen and (min-width: 1000px) {
-
+@media only screen and (min-width: 900px) {
+    .page-container {
+        grid-template-columns: 1fr min-content 1fr;
+        grid-template-rows: max-content 1fr max-content;
+    }
+    .content-container {
+        grid-column: 2 / 3;
+        min-width: 700px;
+    }
+    .ads {
+        grid-column: 3 / 4;
+        grid-row: 2 / 3;
+        height: max-content;
+        margin: 10px 0px 10px 15px;
+    }
+    .footer {
+        grid-row: 3 / 4;
+    }
 }
