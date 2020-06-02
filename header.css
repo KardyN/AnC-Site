@@ -17,6 +17,10 @@
 a {text-decoration: none;}
 a:hover { text-decoration: none;}
 a {color: #cecece;}
+a:focus {
+  background-color: transparent;
+  outline: none;
+}
 
 .hmenu {
     position: relative;
@@ -33,7 +37,7 @@ a {color: #cecece;}
     background-color: #0e0b0b;
     text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
     margin: 12px;
-    outline: none
+    outline: none;
     }
     .hmenu span,
     .bhmenu i {z-index: 2;}
