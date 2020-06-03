@@ -101,7 +101,7 @@ a:focus {
           }
 
     .aside {
-        position: relative;
+        position: absolute;
         top: 30px;
         left: 1800px;
     }
