@@ -141,33 +141,34 @@ body {
 
 @media only screen and (min-width: 900px) {
     .page-container {
-        grid-template-columns: 1fr min-content minmax(250px, 1fr);
-        grid-template-rows: 80px 50px calc(100vh - 210px) 80px;
+        grid-template: [header-start] auto [content-start] 40px [header-end ads-start] auto [content-end ads-end footer-start] auto [footer-end] / [header-start footer-start] 2fr [content-start] 8fr [content-end ads-start] 2fr [ads-end header-end footer-end];
     }
     .page-header {
-        grid-row: 1 / 3;
+        min-height: 8em;
+        grid-area: header;
         z-index: 0;
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
+        padding-bottom: 40px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
     }
     .content-container {
-        grid-column: 2 / 3;
-        grid-row: 2 / -1;
+        grid-area: content;
         z-index: 1;
-        min-width: 60vw;
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
+        padding-top: 40px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
     .ads {
-        grid-column: 3 / 4;
-        grid-row: 3 / 4;
-        align-self: stretch;
-        justify-self: stretch;
-        padding: 20px;
-        margin: 25px;
+        grid-area: ads;
+        padding: 10px;
+        margin: 30px;
         border-radius: 25px;
     }
     .footer {
+        min-height: 8em;
+        grid-area: footer;
         z-index: 2;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
     }
 }
