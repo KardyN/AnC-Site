@@ -2,16 +2,17 @@
     margin: 0;
     padding: 0;
     outline: 0;
+    z-index: 0;
     box-sizing: border-box;
 }
 
 html {
     min-height: 100vh;
-    --light-shade: #F8F8F8;
-    --light-accent: #893168;
-    --brand: #4A1942;
-    --dark-accent: #2E1C2B;
-    --dark-shade: #24252b;
+    --light-shade: #F6F5F6;
+    --light-accent: #e29caf;
+    --brand: #61A0C5;
+    --dark-accent: #EC5557;
+    --dark-shade: #19111f;
 }
 
 body {
@@ -21,40 +22,32 @@ body {
 }
 
 .page-container {
-    min-height: 100%;
-    max-width: 100%;
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 80px 1fr 100px 100px;
-    justify-items: stretch;
-    align-items: stretch;
-    background-image: linear-gradient(var(--accent-1), var(--accent-2));
+    grid-template: repeat(4, auto) / 1fr;
+    background-image: linear-gradient(var(--light-accent), var(--dark-accent));
     background-size: cover;
     font-family: sans-serif;
+    color: var(--dark-shade);
 }
 
 .page-header {
-    grid-column: 1 / -1;
-    grid-row: 1 / 2;
     align-self: stretch;
-    position: sticky;
-    top: 0;
-    padding: 5px 10px;
-    background-color: var(--shadow);
+    padding: 5px;
+    background-color: var(--dark-shade);
 }
 
 .page-header a {
     text-decoration: none;
-    color: whitesmoke;
+    color: var(--brand);
     font-size: 24px;
     font-weight: lighter;
     padding: 6px;
-    border-right: solid rgba(255, 0, 0, 50%) 4px;
+    border-right: solid var(--brand) 4px;
     margin: 0;
 }
 
 .page-header a:hover {
-    border-color: rgba(0, 0, 0, 50%);
+    border-color: var(--dark-accent);
 }
 
 .page-header a.logo {
@@ -63,15 +56,11 @@ body {
 }
 
 .content-container {
-    grid-row: 2 / 3;
-    align-self: stretch;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: max-content max-content repeat(4, fit-content(100%));
-    background-color: whitesmoke;
+    background-color: var(--light-shade);
     padding: 10px;
-    margin: 0px auto;
-    border-radius: 0;
 }
 
 .title {
@@ -85,7 +74,7 @@ body {
 .img {
     grid-column: 1 / 2;
     grid-row: 2 / 4;
-    border-left: 5px solid gray;
+    border-left: 5px solid var(--light-accent);
     border-radius: 16px;
     margin: 4px;
 }
@@ -100,15 +89,15 @@ body {
     text-align: center;
     font-weight: bold;
     font-size: 32px;
-    border: 3px solid gold;
-    border-radius: 8px 18px;
+    border: 3px solid var(--light-accent);
+    border-radius: 25px;
 }
 
 .friends-watched {
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     text-align: center;
-    border: 1px solid rgb(17, 8, 8);
+    border: 1px solid var(--dark-shade);
     margin: 4px;
 }
 
@@ -117,7 +106,7 @@ body {
     grid-row: 4 / 5;
     min-height: 100px;
     font-size: 16px;
-    border: 1px solid black;
+    border: 1px solid var(--dark-shade);
     margin: 4px;
 }
 
@@ -126,7 +115,7 @@ body {
     grid-row: 6 / 7;
     min-height: 100px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--dark-shade);
     margin: 4px;
 }
 
@@ -135,28 +124,25 @@ body {
     grid-row: 5 / 6;
     min-height: 50px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid var(--dark-shade);
     margin: 4px;
 }
 
 .ads {
-    grid-row: 3 / 4;
-    align-self: stretch;
-    background-color: white;
+    background-color: var(--light-shade);
+    color: var(--brand);
+    border: 1px solid gold;
 }
 
 .footer {
-    grid-column: 1 / -1;
-    grid-row: -2 / -1;
-    align-self: stretch;
-    background-color: var(--shadow);
-    color: white;
+    background-color: var(--dark-shade);
+    color: var(--brand);
 }
 
 @media only screen and (min-width: 900px) {
     .page-container {
         grid-template-columns: 1fr min-content minmax(250px, 1fr);
-        grid-template-rows: 80px 50px calc(100vh - 230px) 100px;
+        grid-template-rows: 80px 50px calc(100vh - 210px) 80px;
     }
     .page-header {
         grid-row: 1 / 3;
@@ -180,5 +166,8 @@ body {
         padding: 20px;
         margin: 25px;
         border-radius: 25px;
+    }
+    .footer {
+        z-index: 2;
     }
 }
