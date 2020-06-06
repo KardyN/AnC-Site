@@ -76,14 +76,6 @@ body {
     border: 1px solid var(--dark-shade);
 }
 
-.header-logo > a:focus, .header-account > a:focus {
-    border-color: var(--light-accent);
-}
-
-.header-logo > a:hover, .header-account > a:hover {
-    color: var(--dark-accent);
-}
-
 .header-links {
     clear: both;
     width: 100%;
@@ -104,9 +96,12 @@ body {
 }
 
 .header-links > a:hover, .header-links > a:focus {
+    background-color: rgba(200, 200, 200, .1);
+}
+
+.header-links > a:active {
     color: var(--dark-accent);
     border-color: var(--dark-accent);
-    background-color: rgba(200, 200, 200, .1);
 }
 
 .header-links > a:first-child {
