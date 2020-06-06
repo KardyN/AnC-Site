@@ -4,51 +4,67 @@
         <meta charset= utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Название тайтла</title>
-        <link rel="stylesheet" href="title_page.css">
+        <link rel="stylesheet" href="custom_css.css">
     </head>
     <body>
         <div class="page-container">
-            <header class="page-header">
-                <p>
-                    <a href="front_page.html" class="logo">Site logo</a>
-                    <span class="header_center">
-                        <a href=#>Collections</a>
-                        <a href="profile_page.html">My lists</a>
-                        <a href=#>Friends</a>
-                        <a href=#>Helpful links</a>
-                        <a href=# class="header_nickname">Nickname</a>
-                    </span>
-                </p>
+            <header class="page-header clearfix">
+                <div class="header-logo">
+                    <a href="front_page.html" class="block">Название сайта</a>
+                </div>
+                <div class="header-account clearfix">
+                    <a href=#>Ник (моя страница)</a>
+                    <a href=#>Очки</a>
+                </div>
+                <div class="header-links">
+                    <a href=# class="block">Коллекции</a>
+                    <a href=# class="block">Мои списки</a>
+                    <a href=# class="block">Друзья</a>
+                    <a href=# class="block">Ссылки</a>
+                    <!--NYI
+                    <div class="favourites inline-block"></div>
+                    -->
+                </div>
             </header>
-            <div class="content-container">
-                <header class="title">
-                    Title Name 
+            <div class="content-wrapper clearfix">
+                <header class="title block border">
+                    <h1>
+                        Название тайтла
+                    </h1>
                 </header>
-                <img src="example1.jpg" alt="Title img" class="img">
-                <div class="rating">
-                    8,0/10
+                <div class="info-block border clearfix">
+                    <div class="poster-rating-friends border clearfix">
+                        <div class="poster border clearfix">
+                            <img src="example1.jpg" alt="Title img" class="image block">
+                        </div>
+                        <div class="rating-friends border clearfix">
+                            <div class="rating border">
+                                8,0/10
+                            </div>
+                            <div class="friends border">
+                                friends watched<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                            </div>
+                        </div>
+                    </div>
+                    <div class="description border">
+                        После некоторых событий, показанных в «Историях Коёми», Арараги вновь встречается с Маёй Хатикудзи, хотя, казалось бы, он уже и не думал, 
+                        что когда-нибудь ещё увидит эту непоседливую и милую младшеклассницу. <br>Но на этот раз роли поменялись местами — и именно Хатикудзи теперь 
+                        придётся вытаскивать Коёми из передряги, в которую тот угодил. <br>В конце концов, до выпуска из школы нужно ещё так много сделать! 
+                        <br>Например, окончательно разобраться в своих отношениях с Сэндзёгахарой и узнать тайну Оги Осино. Странности! Странности! 
+                        И вновь странности! Наша история подходит к своему финалу. 
+                    </div>
                 </div>
-                <div class="friends-watched">
-                    friends watched
+                <div class="links border">
+                    helpful links to this title<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 </div>
-                <div class="description">
-                    После некоторых событий, показанных в «Историях Коёми», Арараги вновь встречается с Маёй Хатикудзи, хотя, казалось бы, он уже и не думал, 
-                    что когда-нибудь ещё увидит эту непоседливую и милую младшеклассницу. Но на этот раз роли поменялись местами — и именно Хатикудзи теперь 
-                    придётся вытаскивать Коёми из передряги, в которую тот угодил. В конце концов, до выпуска из школы нужно ещё так много сделать! 
-                    Например, окончательно разобраться в своих отношениях с Сэндзёгахарой и узнать тайну Оги Осино. Странности! Странности! 
-                    И вновь странности! Наша история подходит к своему финалу. 
-                </div>
-                <div class="links">
-                    helpful links to this title<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
-                </div>
-                <div class="franchise-list">
-                    franchise list<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+                <div class="franchise border">
+                    franchise list<br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
                 </div>
             </div>
-            <aside class="ads">
+            <aside class="ads border">
                 ads
             </aside>
-            <footer class="footer">
+            <footer class="footer border">
                 footer
             </footer>
         </div>

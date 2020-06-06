@@ -1,62 +1,40 @@
 <!DOCTYPE html>
 <html lang=ru-RU>
-<head>
-    <meta charset= "utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>Site Name</title>
-    <link rel="stylesheet" href="header.css">
-    <link rel="stylesheet" href="front_page.css">
-</head>
-<body>
-    <header class="background-img">
-            <p><a href="front_page.html"><img src="frontimg/MQSKCrwDvXk.jpg" id="logo"></a></p>
-            <nav>
-                <button id="collection" class="hmenu">
-                    <a href=# >
-                    <span>Коллекции</span>
-                    </a>
-                </button>
-                    
-                  <button id="list" class="hmenu">
-                    <a href=#>
-                    <span> Мои списки</span>
-                    </a>
-                  </button>
-                    
-                  <button id="friends" class="hmenu">
-                    <a href=#>
-                    <span>Друзья</span>
-                    </a>
-                  </button>
-            
-                  <button id="info" class="hmenu">
-                    <a href=#>
-                    <span>Ссылки</span>
-                    </a>
-                  </button>
-                    <ul></ul>
-                <aside>
-                    <button id="nick" class="aside">
-                        <a href=#>
-                        <span>Ник</span>
-                        </a>
-                </aside>
-            </nav>
-    </header>
-    <div id=main>
-        <div>
-        <form action="/search" method="get"> 
-            <input autocomplete="off" name="word" type="text" placeholder="Search"
-                   value=""/>
-                   <input type="submit" value=""/>
-         </div>
-        <div>
-            <select>
-                <option value="1">Сериалы</option>
-                <option value="2">Фильмы</option>
-            </select>
+    <head>
+        <meta charset= utf-8>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Название сайта</title>
+        <link rel="stylesheet" href="custom_css.css">
+    </head>
+    <body>
+        <div class="page-container">
+            <header class="page-header clearfix">
+                <div class="header-logo">
+                    <a href="front_page.html" class="block">Название сайта</a>
+                </div>
+                <div class="header-account clearfix">
+                    <a href=#>Ник (моя страница)</a>
+                    <a href=#>Очки</a>
+                </div>
+                <div class="header-links">
+                    <a href=# class="block">Коллекции</a>
+                    <a href=# class="block">Мои списки</a>
+                    <a href=# class="block">Друзья</a>
+                    <a href=# class="block">Ссылки</a>
+                    <!--NYI
+                    <div class="favourites inline-block"></div>
+                    -->
+                </div>
+            </header>
+            <div class="content-wrapper clearfix">
+
+            </div>
+            <aside class="ads border">
+                ads
+            </aside>
+            <footer class="footer border">
+                footer
+            </footer>
         </div>
-        <p><a href="title_page.html"><img src="frontimg/1589027691.jpg" width="300" height="423"></a></p>
-    </div>
-</body>
+    </body>
 </html>
