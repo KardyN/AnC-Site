@@ -37,7 +37,7 @@ body {
 
 .page-container {
     display: grid;
-    grid-template: repeat(4, auto) / 1fr;
+    grid-template: repeat(5, auto) / 1fr;
     background-image: linear-gradient(var(--light-accent), var(--dark-accent));
     background-size: cover;
     font-family: sans-serif;
@@ -119,9 +119,58 @@ body {
     color: var(--dark-accent);
 }
 
+.search-wrapper {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 40px;
+}
+
+.search-form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.search-clear {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 20px;
+    z-index: 20;
+}
+
+.search-submit {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 20px;
+    z-index: 20;
+}
+
+.search {
+    position: relative;
+    border: none;
+    outline: 0;
+    padding: calc((40px - 1em)/2) 40px;
+    font-size: 18px;
+    font-weight: lighter;
+    color: var(--dark-shade);
+    background-color: var(--dark-shade);
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    transition: background linear 150ms;
+}
+
+.search:hover, .search:focus {
+    background-color: white;
+}
+
 .content-wrapper {
-    background-color: var(--light-shade);
     padding: 10px;
+    position: relative;
+    background-color: var(--light-shade);
 }
 
 .title h1 {
@@ -176,6 +225,24 @@ body {
     text-align: center;
 }
 
+
+.ongoing-carousel {
+    width: 100%;
+    height: 150px;
+}
+
+h3 {
+    color: var(--light-shade);
+    background-color: var(--dark-shade);
+    font-weight: normal;
+    height: 2em;
+    padding: calc(1em/2);
+}
+
+.carousel-item {
+    
+}
+
 .ads {
     background-color: var(--light-shade);
     color: var(--brand);
@@ -194,14 +261,13 @@ body {
 
 @media only screen and (min-width: 900px) {
     .page-container {
-        grid-template: [header-start] auto [content-start] 40px [header-end ads-start] auto [content-end ads-end footer-start] auto [footer-end] / 
-        [header-start footer-start] 1fr [content-start] 4fr [content-end ads-start] 1fr [ads-end header-end footer-end];
+        grid-template: [header-start] auto [search-start] 40px [header-end search-end content-start ads-start] auto [content-end ads-end footer-start] auto [footer-end] / 
+        [header-start footer-start] 1fr [search-start content-start] 4fr [search-end content-end ads-start] 1fr [ads-end header-end footer-end];
         column-gap: 20px;
     }
 
     .page-header {
         grid-area: header;
-        z-index: 0;
         padding-bottom: 40px;
         border-bottom-left-radius: 20px;
         border-bottom-right-radius: 20px;
@@ -247,12 +313,32 @@ body {
         background: var(--dark-accent);
     }
     
-    .content-wrapper {
-        grid-area: content;
-        z-index: 1;
-        padding: 40px 10px;
+    .search-wrapper {
+        grid-area: search;
+        z-index: 10;
+    }
+
+    .search {
+        border: 2px solid rgba(255, 255, 255, 0);
+        background-color: rgba(255, 255, 255, .05);
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
+        padding: calc((36px - 1em)/2) 40px;
+        transition: background-color ease-out 200ms, border-color ease-out 150ms;
+    }
+
+    .search:hover {
+        background-color: rgba(255, 255, 255, .05);
+        border-color: rgba(255, 255, 255, .05);
+    }
+
+    .search:focus {
+        background-color: var(--light-shade);
+        border-color: var(--light-shade);
+    }
+
+    .content-wrapper {
+        grid-area: content;
     }
 
     .ads {
@@ -262,9 +348,8 @@ body {
     }
 
     .footer {
-        min-height: 8em;
+        padding: 40px;
         grid-area: footer;
-        z-index: 2;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
