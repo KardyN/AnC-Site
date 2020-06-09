@@ -4,7 +4,9 @@
         <meta charset= utf-8>
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
         <title>Название сайта</title>
+        <link rel="stylesheet" href="lib/flickity.css" media="screen">
         <link rel="stylesheet" href="custom_css.css">
+        <script src="lib/flickity.pkgd.js"></script>
     </head>
     <body>
         <div class="page-container">
@@ -33,19 +35,106 @@
                 </form>
                 <img src="images/search.png" class="search-submit">
             </div>
-            <div class="content-wrapper clearfix">
-                <div class="ongoing-wrapper">
+            <div class="content-wrapper">
+                <div class="ongoing-carousel-wrapper">
                     <h3>Сейчас идут</h3>
-                    <div class="ongoing-carousel">
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
-                        <div class="carousel-item"></div>
+                    <div class="carousel">
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
+                        <div class="carousel-cell">
+                            <a href="#">
+                                <img src="/images/example2.jpg" class="carousel-cell-image">
+                                <div class="carousel-cell-title">
+                                    Shokugeki no Souma: Gou no Sara
+                                </div>
+                            </a>
+                        </div>
                     </div>
                 </div>
                 <div class="adv-search-pop-collections">
@@ -64,5 +153,18 @@
                 <!--Icons made by <a href="https://www.flaticon.com/authors/those-icons" title="Those Icons">Those Icons</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a>-->
             </footer>
         </div>
+        <script>
+            var flkty = new Flickity('.carousel', {
+                draggable: true, 
+                wrapAround: true, 
+                groupCells: true, 
+                autoPlay: 8000, 
+                dragThreshold: 10, 
+                imagesLoaded: true, 
+                selectedAttraction: 0.02, 
+                friction: 0.6, 
+                pageDots: false
+            })
+        </script>
     </body>
 </html>
