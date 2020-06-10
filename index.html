@@ -12,7 +12,7 @@
         <div class="page-container">
             <header class="page-header clearfix">
                 <div class="header-logo">
-                    <a href="front_page.html" class="block">Название сайта</a>
+                    <a href="index.html" class="block">Название сайта</a>
                 </div>
                 <div class="header-account clearfix">
                     <a href=#>Ник (моя страница)</a>
@@ -30,9 +30,9 @@
             </header>
             <div class="search-wrapper">
                 <img src="images/clear.png" class="search-clear">
-                <form class="search-form">
-                    <input type="text" class="search" placeholder="Поиск аниме...">
-                </form>
+                <form class="search-form" action="search.php" method=GET>
+                    <input autocomplete="off" type="text" class="search" name="word" placeholder="Поиск аниме...">
+                </form>ы
                 <img src="images/search.png" class="search-submit">
             </div>
             <div class="content-wrapper">
